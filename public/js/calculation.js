@@ -14,6 +14,8 @@ document.getElementById("mode-button").addEventListener("click", modeChange);
 document.getElementById("plus-button").addEventListener("click", increaseTemperature);
 document.getElementById("minus-button").addEventListener("click", decreaseTemperature);
 
+console.log("Turn on/off button clicked");
+
 const time = () => setInterval(updateTime, 1000)
 
 function updateTime() {
@@ -29,7 +31,7 @@ function turnOnOff() {
 }
 
 function updateDisplay() {
-    if (!isOn) {
+    if (isOn) {
         temperatureObj.innerText = `Temperatur: ${temperature} Celsius`
         levelObj.innerText = `Level: ${level}`
         modusObj.innerText = `Modus: ${mode}`
@@ -39,7 +41,6 @@ function updateDisplay() {
         modusObj.innerText = ""
     }
 }
-
 
 // this should be a very helpful comment
 getGreetingDependOnTime = function (myDate) {

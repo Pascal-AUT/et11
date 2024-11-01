@@ -13,11 +13,6 @@ function sum(arr) {
 
 describe('#sum()', function () {
 
-    //  if needed logic before each test run
-    beforeEach(function () {
-
-    })
-
     // test a functionality
     it('should add numbers', function () {
         expect(sum([1, 2, 3, 4, 5])).to.equal(15);
