@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 app.post('/api/fromCelsiusToFahrenheit', (req, res) => {
     const {temperature} = req.body;
     const result = auxiliaryAPI.celsiusToFahrenheit(temperature);
+    
     return res.status(200).send({
         result
     });
@@ -31,6 +32,7 @@ app.post('/api/fromCelsiusToFahrenheit', (req, res) => {
 app.post('/api/fromFahrheitToCelsius', (req, res) => {
     const {temperature} = req.body;
     const result = auxiliaryAPI.fahrenheitToCelcius(temperature);
+
     return res.status(200).send({
         result
     });
