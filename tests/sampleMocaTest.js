@@ -3,9 +3,11 @@ const expect = require('chai').expect;
 //Sample JUnit test
 function sum(arr) {
     let res = 0;
+    
     for (let i = 0; i < arr.length; i++) {
         res += arr[i];
     }
+
     return res;
 }
 
@@ -21,4 +23,11 @@ describe('#sum()', function () {
         expect(sum([1, 2, 3, 4, 5])).to.equal(15);
     })
 
+    it('should add negative numbers', function () {
+        expect(sum([-1, -2, -3, -4, -5])).to.equal(-15);
+    })
+
+    it('should handle an empty array', function () {
+        expect(sum([])).to.equal(0);
+    })
 });
